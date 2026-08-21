@@ -11,3 +11,6 @@ sa-key.json
 __pycache__/
 *.pyc
 .DS_Store
+
+id_rsa_deploy
+id_rsa_deploy.pub
