@@ -32,6 +32,13 @@ def train(
         f1 (float): diem F1 cua lop duong (thu nhap > 50K) tren tap holdout.
     """
 
+    # Đảm bảo thư mục và file cấu hình cho MLflow luôn tồn tại
+    os.makedirs("mlruns/0", exist_ok=True)
+    meta_path = "mlruns/0/meta.yaml"
+    if not os.path.exists(meta_path):
+        with open(meta_path, "w", encoding="utf-8") as f:
+            f.write("artifact_location: file:///mlruns/0\ncreation_time: 0\nexperiment_id: '0'\nlifecycle_stage: active\nname: Default\n")
+
     # TODO 1: Doc du lieu huan luyen va danh gia
     # df_train = ...
     # df_eval  = ...
