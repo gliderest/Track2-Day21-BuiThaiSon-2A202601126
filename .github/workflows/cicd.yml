@@ -34,6 +34,11 @@ jobs:
         # TODO 1: Viet lenh de chay pytest tren thu muc tests/ voi co -v
         run: |
           mkdir -p mlruns/0
+          echo "artifact_location: file:///home/runner/work/Track2-Day21-BuiThaiSon-2A202601126/Track2-Day21-BuiThaiSon-2A202601126/mlruns/0" > mlruns/0/meta.yaml
+          echo "creation_time: 1700000000000" >> mlruns/0/meta.yaml
+          echo "experiment_id: '0'" >> mlruns/0/meta.yaml
+          echo "lifecycle_stage: active" >> mlruns/0/meta.yaml
+          echo "name: Default" >> mlruns/0/meta.yaml
           pytest tests/ -v
 
 
