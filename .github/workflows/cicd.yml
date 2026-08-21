@@ -60,7 +60,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install "dvc[s3]" -r requirements.txt
+          pip install -r requirements.txt
 
       - name: Authenticate to Cloud Storage
         # TODO 2: Ghi noi dung credentials ra file tam va set bien moi truong xac thuc.
